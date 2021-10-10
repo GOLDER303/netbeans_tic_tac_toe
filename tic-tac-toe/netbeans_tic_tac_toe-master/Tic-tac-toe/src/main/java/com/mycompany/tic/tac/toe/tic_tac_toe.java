@@ -10,7 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 /**
  *
- * @author Admin
+ * @author Szymon Stępień & Rafał Zieliński
  */
 public class tic_tac_toe extends javax.swing.JFrame {
     
@@ -32,6 +32,17 @@ public class tic_tac_toe extends javax.swing.JFrame {
     {
         graczxwynik.setText(String.valueOf(xCount));
         graczowynik.setText(String.valueOf(oCount));
+        pole_pierwsze.setEnabled(false);
+        pole_drugie.setEnabled(false);
+        pole_trzecie.setEnabled(false);
+        
+        pole_czwarte.setEnabled(false);
+        pole_piate.setEnabled(false);
+        pole_szoste.setEnabled(false);
+        
+        pole_siodme.setEnabled(false);
+        pole_osme.setEnabled(false);
+        pole_dziewiate.setEnabled(false);      
     }
     
     
@@ -47,7 +58,7 @@ public class tic_tac_toe extends javax.swing.JFrame {
         }
     }
     
-    private void WygranieGry()
+    private void wygranie_gry()
     {
         String b1 = pole_pierwsze.getText();
         String b2 = pole_drugie.getText();
@@ -64,166 +75,166 @@ public class tic_tac_toe extends javax.swing.JFrame {
         //GRACZ X
         
         if(b1 == ("X") && b2 ==("X") && b3 == ("X"))
-        {
-            JOptionPane.showMessageDialog(this, "Gracz X wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
-            xCount++;
-            WygranieGry();
-            
+        {                     
             pole_pierwsze.setBackground(Color.ORANGE);
             pole_drugie.setBackground(Color.ORANGE);
             pole_trzecie.setBackground(Color.ORANGE);
-        }
-        if(b4 == ("X") && b5 ==("X") && b6 == ("X"))
-        {
+            
             JOptionPane.showMessageDialog(this, "Gracz X wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
             xCount++;
-            WygranieGry();
-            
+            punkty();
+        }
+        else if(b4 == ("X") && b5 ==("X") && b6 == ("X"))
+        {   
             pole_czwarte.setBackground(Color.ORANGE);
             pole_piate.setBackground(Color.ORANGE);
             pole_szoste.setBackground(Color.ORANGE);
-        }
-        if(b7 == ("X") && b8 ==("X") && b9 == ("X"))
-        {
+            
             JOptionPane.showMessageDialog(this, "Gracz X wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
             xCount++;
-            WygranieGry();
-            
+            punkty();
+        }
+        else if(b7 == ("X") && b8 ==("X") && b9 == ("X"))
+        {
             pole_siodme.setBackground(Color.ORANGE);
             pole_osme.setBackground(Color.ORANGE);
             pole_dziewiate.setBackground(Color.ORANGE);
-        }
-        if(b1 == ("X") && b4 ==("X") && b7 == ("X"))
-        {
+            
             JOptionPane.showMessageDialog(this, "Gracz X wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
             xCount++;
-            WygranieGry();
-            
+            punkty();
+        }
+        else if(b1 == ("X") && b4 ==("X") && b7 == ("X"))
+        {
             pole_pierwsze.setBackground(Color.ORANGE);
             pole_czwarte.setBackground(Color.ORANGE);
             pole_siodme.setBackground(Color.ORANGE);
-        }
-        if(b2 == ("X") && b5 ==("X") && b8 == ("X"))
-        {
+            
             JOptionPane.showMessageDialog(this, "Gracz X wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
             xCount++;
-            WygranieGry();
-            
+            punkty();
+        }
+        else if(b2 == ("X") && b5 ==("X") && b8 == ("X"))
+        {
             pole_drugie.setBackground(Color.ORANGE);
             pole_piate.setBackground(Color.ORANGE);
             pole_osme.setBackground(Color.ORANGE);
-        }
-        if(b3 == ("X") && b6 ==("X") && b9 == ("X"))
-        {
+            
             JOptionPane.showMessageDialog(this, "Gracz X wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
             xCount++;
-            WygranieGry();
-            
+            punkty();
+        }
+        else if(b3 == ("X") && b6 ==("X") && b9 == ("X"))
+        {
             pole_trzecie.setBackground(Color.ORANGE);
             pole_szoste.setBackground(Color.ORANGE);
             pole_dziewiate.setBackground(Color.ORANGE);
-        }
-        if(b1 == ("X") && b5 ==("X") && b9 == ("X"))
-        {
+            
             JOptionPane.showMessageDialog(this, "Gracz X wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
             xCount++;
-            WygranieGry();
-            
+            punkty();
+        }
+        else if(b1 == ("X") && b5 ==("X") && b9 == ("X"))
+        {
             pole_pierwsze.setBackground(Color.ORANGE);
             pole_piate.setBackground(Color.ORANGE);
             pole_dziewiate.setBackground(Color.ORANGE);
-        }
-        if(b3 == ("X") && b5 ==("X") && b7 == ("X"))
-        {
+            
             JOptionPane.showMessageDialog(this, "Gracz X wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
             xCount++;
-            WygranieGry();
-            
+            punkty();
+        }
+        else if(b3 == ("X") && b5 ==("X") && b7 == ("X"))
+        {
             pole_trzecie.setBackground(Color.ORANGE);
             pole_piate.setBackground(Color.ORANGE);
             pole_siodme.setBackground(Color.ORANGE);
+            
+            JOptionPane.showMessageDialog(this, "Gracz X wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
+            xCount++;
+            punkty();
         }
         //GRACZ O
         
         if(b1 == ("O") && b2 ==("O") && b3 == ("O"))
         {
-            JOptionPane.showMessageDialog(this, "Gracz O wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
-            xCount++;
-            WygranieGry();
-            
             pole_pierwsze.setBackground(Color.ORANGE);
             pole_drugie.setBackground(Color.ORANGE);
             pole_trzecie.setBackground(Color.ORANGE);
-        }
-        if(b4 == ("O") && b5 ==("O") && b6 == ("O"))
-        {
+            
             JOptionPane.showMessageDialog(this, "Gracz O wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
             xCount++;
-            WygranieGry();
-            
+            punkty();
+        }
+        else if(b4 == ("O") && b5 ==("O") && b6 == ("O"))
+        {
             pole_czwarte.setBackground(Color.ORANGE);
             pole_piate.setBackground(Color.ORANGE);
             pole_szoste.setBackground(Color.ORANGE);
-        }
-        if(b7 == ("O") && b8 ==("O") && b9 == ("O"))
-        {
+            
             JOptionPane.showMessageDialog(this, "Gracz O wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
             xCount++;
-            WygranieGry();
-            
+            punkty();
+        }
+        else if(b7 == ("O") && b8 ==("O") && b9 == ("O"))
+        {
             pole_siodme.setBackground(Color.ORANGE);
             pole_osme.setBackground(Color.ORANGE);
             pole_dziewiate.setBackground(Color.ORANGE);
-        }
-        if(b1 == ("O") && b4 ==("O") && b7 == ("O"))
-        {
-            JOptionPane.showMessageDialog(this, "Gracz O wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
-            xCount++;
-            WygranieGry();
             
+            JOptionPane.showMessageDialog(this, "Gracz O wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
+            oCount++;
+            punkty();
+        }
+        else if(b1 == ("O") && b4 ==("O") && b7 == ("O"))
+        {
             pole_pierwsze.setBackground(Color.ORANGE);
             pole_czwarte.setBackground(Color.ORANGE);
             pole_siodme.setBackground(Color.ORANGE);
-        }
-        if(b2 == ("O") && b5 ==("O") && b8 == ("O"))
-        {
-            JOptionPane.showMessageDialog(this, "Gracz O wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
-            xCount++;
-            WygranieGry();
             
+            JOptionPane.showMessageDialog(this, "Gracz O wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
+            oCount++;
+            punkty();
+        }
+        else if(b2 == ("O") && b5 ==("O") && b8 == ("O"))
+        {
             pole_drugie.setBackground(Color.ORANGE);
             pole_piate.setBackground(Color.ORANGE);
             pole_osme.setBackground(Color.ORANGE);
-        }
-        if(b3 == ("O") && b6 ==("O") && b9 == ("O"))
-        {
-            JOptionPane.showMessageDialog(this, "Gracz O wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
-            xCount++;
-            WygranieGry();
             
+            JOptionPane.showMessageDialog(this, "Gracz O wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
+            oCount++;
+            punkty();
+        }
+        else if(b3 == ("O") && b6 ==("O") && b9 == ("O"))
+        {
             pole_trzecie.setBackground(Color.ORANGE);
             pole_szoste.setBackground(Color.ORANGE);
             pole_dziewiate.setBackground(Color.ORANGE);
-        }
-        if(b1 == ("O") && b5 ==("O") && b9 == ("O"))
-        {
-            JOptionPane.showMessageDialog(this, "Gracz O wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
-            xCount++;
-            WygranieGry();
             
+            JOptionPane.showMessageDialog(this, "Gracz O wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
+            oCount++;
+            punkty();
+        }
+        else if(b1 == ("O") && b5 ==("O") && b9 == ("O"))
+        {
             pole_pierwsze.setBackground(Color.ORANGE);
             pole_piate.setBackground(Color.ORANGE);
             pole_dziewiate.setBackground(Color.ORANGE);
-        }
-        if(b3 == ("O") && b5 ==("O") && b7 == ("O"))
-        {
-            JOptionPane.showMessageDialog(this, "Gracz O wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
-            xCount++;
-            WygranieGry();
             
+            JOptionPane.showMessageDialog(this, "Gracz O wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
+            oCount++;
+            punkty();
+        }
+        else if(b3 == ("O") && b5 ==("O") && b7 == ("O"))
+        {
             pole_trzecie.setBackground(Color.ORANGE);
             pole_piate.setBackground(Color.ORANGE);
             pole_siodme.setBackground(Color.ORANGE);
+            
+            JOptionPane.showMessageDialog(this, "Gracz O wygral", "Kolko krzyzyk", JOptionPane.INFORMATION_MESSAGE);
+            oCount++;
+            punkty();
         }
         
         
@@ -270,17 +281,17 @@ public class tic_tac_toe extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(342, 342, 342)
                 .addComponent(jLabel1)
-                .addGap(390, 390, 390))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(21, 21, 21)
                 .addComponent(jLabel1)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         pole_drugie.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
@@ -369,10 +380,10 @@ public class tic_tac_toe extends javax.swing.JFrame {
         graczx.setText("Gracz X:");
 
         graczxwynik.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        graczxwynik.setText("xxxxxxxxxx");
+        graczxwynik.setText("0");
 
         graczowynik.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        graczowynik.setText("xxxxxxxxxx");
+        graczowynik.setText("0");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -387,7 +398,7 @@ public class tic_tac_toe extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(graczowynik)
                     .addComponent(graczxwynik))
-                .addContainerGap(258, Short.MAX_VALUE))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -409,7 +420,12 @@ public class tic_tac_toe extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(59, 59, 59)
+                .addGap(72, 72, 72)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(wyjscie, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(reset, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(pole_siodme, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -430,25 +446,22 @@ public class tic_tac_toe extends javax.swing.JFrame {
                             .addComponent(pole_drugie, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
                             .addComponent(pole_trzecie, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(83, 83, 83)
-                        .addComponent(reset, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(48, 48, 48)
-                        .addComponent(wyjscie, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 34, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(22, 22, 22))))
+                .addGap(72, 72, 72))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(reset, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(wyjscie, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 22, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(pole_drugie, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(pole_trzecie, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -457,24 +470,13 @@ public class tic_tac_toe extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(pole_piate, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(pole_szoste, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pole_czwarte, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
+                            .addComponent(pole_czwarte, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(pole_osme, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(pole_dziewiate, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pole_siodme, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 38, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(wyjscie, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(reset, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(54, 54, 54))))
+                            .addComponent(pole_siodme, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(35, 35, 35))
         );
 
         pack();
@@ -496,7 +498,7 @@ public class tic_tac_toe extends javax.swing.JFrame {
         }
         
         wybor_gracza();
-        WygranieGry();
+        wygranie_gry();
     }//GEN-LAST:event_pole_pierwszeActionPerformed
 
     private void pole_drugieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pole_drugieActionPerformed
@@ -513,7 +515,7 @@ public class tic_tac_toe extends javax.swing.JFrame {
         }
         
         wybor_gracza();
-        WygranieGry();
+        wygranie_gry();
     }//GEN-LAST:event_pole_drugieActionPerformed
 
     private void wyjscieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyjscieActionPerformed
@@ -541,7 +543,7 @@ public class tic_tac_toe extends javax.swing.JFrame {
         }
         
         wybor_gracza();
-        WygranieGry();
+        wygranie_gry();
     }//GEN-LAST:event_pole_trzecieActionPerformed
 
     private void pole_czwarteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pole_czwarteActionPerformed
@@ -558,7 +560,7 @@ public class tic_tac_toe extends javax.swing.JFrame {
         }
         
         wybor_gracza();
-        WygranieGry();
+        wygranie_gry();
     }//GEN-LAST:event_pole_czwarteActionPerformed
 
     private void pole_piateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pole_piateActionPerformed
@@ -575,7 +577,7 @@ public class tic_tac_toe extends javax.swing.JFrame {
         }
         
         wybor_gracza();
-        WygranieGry();
+        wygranie_gry();
     }//GEN-LAST:event_pole_piateActionPerformed
 
     private void pole_szosteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pole_szosteActionPerformed
@@ -592,7 +594,7 @@ public class tic_tac_toe extends javax.swing.JFrame {
         }
         
         wybor_gracza();
-        WygranieGry();
+        wygranie_gry();
     }//GEN-LAST:event_pole_szosteActionPerformed
 
     private void pole_siodmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pole_siodmeActionPerformed
@@ -609,7 +611,7 @@ public class tic_tac_toe extends javax.swing.JFrame {
         }
         
         wybor_gracza();
-        WygranieGry();
+        wygranie_gry();
     }//GEN-LAST:event_pole_siodmeActionPerformed
 
     private void pole_osmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pole_osmeActionPerformed
@@ -626,7 +628,7 @@ public class tic_tac_toe extends javax.swing.JFrame {
         }
         
         wybor_gracza();
-        WygranieGry();
+        wygranie_gry();
     }//GEN-LAST:event_pole_osmeActionPerformed
 
     private void pole_dziewiateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pole_dziewiateActionPerformed
@@ -643,7 +645,7 @@ public class tic_tac_toe extends javax.swing.JFrame {
         }
         
         wybor_gracza();
-        WygranieGry();
+        wygranie_gry();
     }//GEN-LAST:event_pole_dziewiateActionPerformed
 
     private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
@@ -672,6 +674,18 @@ public class tic_tac_toe extends javax.swing.JFrame {
         pole_siodme.setBackground(Color.LIGHT_GRAY);
         pole_osme.setBackground(Color.LIGHT_GRAY);
         pole_dziewiate.setBackground(Color.LIGHT_GRAY);
+        
+        pole_pierwsze.setEnabled(true);
+        pole_drugie.setEnabled(true);
+        pole_trzecie.setEnabled(true);
+        
+        pole_czwarte.setEnabled(true);
+        pole_piate.setEnabled(true);
+        pole_szoste.setEnabled(true);
+        
+        pole_siodme.setEnabled(true);
+        pole_osme.setEnabled(true);
+        pole_dziewiate.setEnabled(true); 
     }//GEN-LAST:event_resetActionPerformed
 
     /**
